@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ASCNetGet</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (void)getDatatWithsuccess:(void(^)(id responseObject , NSDictionary *fullRespDic, NSInteger responseCode))successBlock
+                      error:(void(^)(id response, NSError *error))errorBlock {
+                          NSString *url = [[ALISCAPIGenerate sharedInstance] API:&lt;#apiname#&gt;];
+
+    [[ALISCNetworkExecute sharedInstance] GETWithToken:url
+                                            parameters:nil
+                                  responseDtoClassType:nil
+                                               success:^(id responseObject) {
+                                                   NSInteger responseCode = [responseObject[@"responseCode"] integerValue];
+                                                   if (responseCode == 200) {
+                                                       
+                                                   }
+                                                   else {
+                                                       if (successBlock) {
+                                                           successBlock(nil, responseObject, responseCode);
+                                                       }
+                                                   }
+                                               } failure:^(NSDictionary *responseBody, NSError *error) {
+                                                   if (errorBlock) {
+                                                       errorBlock(nil, error);
+                                                   }
+                                               }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A7F2E601-27DF-4BD7-BD97-FCBDB5B5D2E3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>ASCNetGet</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>ASCNetGet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

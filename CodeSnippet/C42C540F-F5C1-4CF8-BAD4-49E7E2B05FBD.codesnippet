@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BTCollectionImplementation</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface &lt;#controllerName#&gt; ()
+&lt;
+    UICollectionViewDataSource,
+    UICollectionViewDelegateFlowLayout
+&gt;
+@property (strong, nonatomic) UICollectionView *collectionView;
+@property (copy) NSArray *datas;
+@end
+
+@implementation &lt;#controllerName#&gt;
+    
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupDatas];
+    [self setupUI];
+}
+    
+- (void)setupDatas {
+    self.datas = @[@"",@""];
+}
+    
+- (void)setupUI {
+    self.view.backgroundColor = [UIColor asc_tableViewBackgroundColor];
+    [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+}
+    
+    
+#pragma mark - collectionView
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.datas.count ? self.datas.count : 0;
+}
+    
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell *collectionCell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([&lt;#classname#&gt; class]) forIndexPath:indexPath];
+    return collectionCell;
+}
+    
+#pragma mark - UICollectionViewDelegateFlowLayout
+// cell大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(collectionView.bounds.size.width, 44);
+}
+    
+// section里每一行之间的纵向间隔
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+    
+// setion里每个item横向间隔
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 0;
+}
+// section的Edge
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    return UIEdgeInsetsZero;
+}
+    
+// header大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeZero;
+}
+    
+// footer大小
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    return CGSizeZero;
+}
+    
+#pragma mark - setter and getter
+    
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+        _collectionView.backgroundColor = [UIColor asc_n1_3];
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
+        _collectionView.alwaysBounceVertical = YES;
+        _collectionView.contentInset = UIEdgeInsetsMake(8, 8, 0, 8);
+        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([&lt;#classname#&gt; class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:NSStringFromClass([&lt;#classname#&gt; class])];
+              [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([&lt;#suplementaryName#&gt; class]) bundle:[NSBundle mainBundle]] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:NSStringFromClass([&lt;#suplementaryName#&gt; class])];
+    }
+    return _collectionView;
+}
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C42C540F-F5C1-4CF8-BAD4-49E7E2B05FBD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BTCollectionImplementations</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BTCollectionImplementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

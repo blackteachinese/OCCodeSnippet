@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BTReadFromJson</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>   NSURL *kUrl = [[NSBundle mainBundle] URLForResource:@"&lt;#ResourceName#&gt;" withExtension:@"json"];
+    NSData *kdata = [NSData dataWithContentsOfURL:kUrl];
+    NSError *error;
+    NSDictionary *kObject = [NSJSONSerialization JSONObjectWithData:kdata options:NSJSONReadingMutableLeaves error:&amp;error];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A7F83ED9-6E47-4C85-BD08-29956EF84EED</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BTReadFromJsons</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BTReadFromJson</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

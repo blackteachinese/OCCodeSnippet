@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BTReadFromPlist</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> NSURL *kUrl = [[NSBundle mainBundle] URLForResource:@"&lt;#ResourceName#&gt;" withExtension:@"plist"];
+    NSDictionary *kDictionary = [NSDictionary dictionaryWithContentsOfURL:kUrl];
+    NSArray *kArray = [NSArray arrayWithContentsOfURL:kUrl];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A6C559B3-54F3-4DBC-8CFF-2E0A42EC423A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BTReadFromPlists</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BTReadFromPlist</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

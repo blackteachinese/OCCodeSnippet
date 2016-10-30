@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>BTViewControllerImp</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface &lt;#ViewController#&gt; ()
+
+@end
+
+@implementation &lt;#ViewController#&gt;
+
+#pragma mark - Life cycle
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupUI];
+};
+
+#pragma mark - setup
+
+- (void)setupUI {
+    self.view.backgroundColor = [UIColor asc_tableViewBackgroundColor];
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+    {
+        self.edgesForExtendedLayout = UIRectEdgeTop;
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        self.extendedLayoutIncludesOpaqueBars=NO;
+    }
+}
+    
+#pragma mark - actions
+
+#pragma mark - helper
+
+#pragma mark - network
+
+#pragma mark - settter and getter
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>52602B4C-36D4-4B82-9ECC-CCCD3059AAAC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>BTViewControllerImps</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>BTViewControllerImp</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
