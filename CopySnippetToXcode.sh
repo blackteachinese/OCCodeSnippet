@@ -5,7 +5,7 @@
 
 if [[ ! -d "$HOME/Library/Developer/Xcode/UserData/CodeSnippets" ]]; then
 	#statements
-	#mkdir ~/Library/Developer/Xcode/UserData/CodeSnippets
+	mkdir ~/Library/Developer/Xcode/UserData/CodeSnippets
 	echo 'create CodeSnippets folder'
 fi
 
